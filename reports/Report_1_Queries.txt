@@ -1,0 +1,25 @@
+$q = "select * from student_archive where NAME = '$dval' and STATUS = 'Current'";
+
+$q = "delete from current_student where STUDENT_ID = '$del_id'";
+
+$q = "update student_archive set status = 'Dropout' where STUDENT_ID = '$del_id'";
+
+$q = "select * from current_student where STUDENT_ID = '$dval'";
+
+$q = "delete from current_student where STUDENT_ID = '$del_id'";
+
+$q = "update student_archive set status = 'Dropout' where STUDENT_ID = '$del_id'";
+
+$q = "select * from student_archive where NAME = '$sval' and STATUS = 'Current'";
+
+$q = "select * from student_archive where STUDENT_ID = '$sval' and STATUS = 'Current'";
+
+$q = "select * from current_student where CLASS_GRADE = $sval";
+
+$q5 = "select * from student_archive where STUDENT_ID = '$sid' and STATUS = 'Current'";
+
+$q = "select * from current_student order by class_grade";
+
+$q3 = "select * from current_student order by class_grade";
+
+$q2 = "select * from student_archive where student_id = $id";

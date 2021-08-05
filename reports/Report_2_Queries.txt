@@ -1,0 +1,18 @@
+REPORT 12 :
+
+$q = "select count(STUDENT_ID) as COUNTSTUDENTS from current_student 
+where CLASS_GRADE = '$grade' AND CLASS_SECTION = '$section'";
+
+
+$q = "select count(table1.STUDENT_ID) as COUNTFEMALE
+                from current_student table1, student_archive table2
+                where table1.CLASS_GRADE = $grade AND table1.CLASS_SECTION = '$section'
+                AND table1.STUDENT_ID = table2.STUDENT_ID
+                AND ( table2.gender = 'f' or table2.gender = 'F')";
+
+
+$q = "select count(table1.STUDENT_ID) as COUNTMALE
+                from current_student table1, student_archive table2
+                where table1.CLASS_GRADE = $grade AND table1.CLASS_SECTION = '$section'
+                AND table1.STUDENT_ID = table2.STUDENT_ID
+                AND ( table2.gender = 'm' or table2.gender = 'M')";

@@ -1,0 +1,15 @@
+$q3 = 	"select sa.student_id, sa.name, sa.gender, cs.class_grade, cs.class_section, sa.enroll_date, sa.cnic, fa.fname, mo.fname as mname, ga.fname as gname, sa.home_address, sa.date_of_birth, sa.email, sa.contact_number
+from student_archive sa, current_student cs, father fa, mother mo, guardian ga
+where sa.name = '".$_POST["studentname"]."' and sa.student_id = cs.student_id and fa.fatherid = sa.father_id and mo.motherid = sa.mother_id and ga.guardianid = sa.guardian_id";
+		
+$q4 = 	"select sa.student_id, sa.name, sa.gender, cs.class_grade, cs.class_section
+from student_archive sa, current_student cs
+where sa.student_id = cs.student_id and sa.name != '".$_POST["studentname"]."' and sa.mother_id in 		(	select mother_id
+																											from student_archive
+																											where name = '".$_POST["studentname"]."'
+																												)
+																				and sa.father_id in 	(	select father_id
+																											from student_archive
+																													where name = '".$_POST["studentname"]."'
+																				
+																											)";
