@@ -2,3 +2,4 @@ $q3 = 	"select student_id, name, gender
 	from student_archive
 	where student_id in (select student_id from dormant_student
 				where ADD_MONTHS(dormant_start_date,".$months.") < SYSDATE )";
+				
