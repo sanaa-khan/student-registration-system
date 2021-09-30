@@ -38,3 +38,6 @@ be performed using student name or id.
 
 - A report of all info on a given parent (all children, classes of each child, designated guardian).
 Search can be performed using parent name or id.
+
+## Contact
+Need help? Got any queries? Feel free to hit me up at sanakahnn@gmail.com.
